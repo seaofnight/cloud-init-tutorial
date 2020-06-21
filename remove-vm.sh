@@ -1,8 +1,10 @@
 #!/bin/bash 
 
-VM_NAME=kf0
+source ./vm_env 
 
-virsh shutdown $VM_NAME 
+virsh shutdown $HOSTNAME
 sleep 1
-virsh undefine $VM_NAME --remove-all-storage 
-rm -rf $VM_NAME
+virsh undefine $HOSTNAME --remove-all-storage 
+rm -rf $HOSTNAME
+
+ls -al ./
