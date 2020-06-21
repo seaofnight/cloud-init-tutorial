@@ -12,3 +12,4 @@ ADDRESS=192.168.14.174
 USER_DATA=user-data
 META_DATA=meta-data
 CI_ISO=$HOSTNAME-cidata.iso
+
