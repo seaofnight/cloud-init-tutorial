@@ -1,0 +1,14 @@
+#!/usr/bin/env
+
+WORKSPACE=${PWD}
+TEMPLATE=$WORKSPACE/template
+
+CPU=6
+MEM=10240
+HOSTNAME=controller
+DISK=$HOSTNAME.qcow2
+ADDRESS=192.168.14.174
+
+USER_DATA=user-data
+META_DATA=meta-data
+CI_ISO=$HOSTNAME-cidata.iso
