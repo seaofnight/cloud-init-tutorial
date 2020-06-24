@@ -17,7 +17,13 @@ generate_data(){
  mkdir -p $WORKSPACE/$HOSTNAME
  cp $IMAGE $WORKSPACE/$HOSTNAME/$HOSTNAME.qcow2
  cp $TEMPLATE/user-data $WORKSPACE/$HOSTNAME/$USER_DATA
- cat template/meta-data | sed -e "s/HOSTNAME/$HOSTNAME/g" -e "s/ADDRESS/$ADDRESS/g" > $WORKSPACE/$HOSTNAME/$META_DATA
+ cat template/meta-data | \
+    sed -e "s/HOSTNAME/$HOSTNAME/g" \
+        -e "s/ADDRESS/$ADDRESS/g" \
+        -e "s/NETWORK/$NETWORK/g" \
+        -e "s/NETMASK/$NETMASK/g" \
+        -e "s/GATEWAY/$GATEWAY/g" \
+    > $WORKSPACE/$HOSTNAME/$META_DATA
 
 }
 

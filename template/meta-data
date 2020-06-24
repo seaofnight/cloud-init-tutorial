@@ -4,8 +4,7 @@ local-hostname: HOSTNAME
 network-interfaces: |
   iface eth0 inet static
   address ADDRESS 
-  network 192.168.14.0
-  netmask 255.255.255.0
-  broadcast 192.168.14.255
-  gateway 192.168.14.1
+  network NETWORK
+  netmask NETMASK
+  gateway GATEWAY
 
